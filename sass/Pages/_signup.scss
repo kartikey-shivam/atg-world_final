@@ -1,0 +1,203 @@
+.sign {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include respond(tab-port) {
+    // display: none;
+    // align-items: ;
+    // bottom: 10%;
+  }
+  &-text {
+    width: 100%;
+    background: #effff4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px 8px 0px 0px;
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #008a45;
+    padding: 1rem 1.5rem 0rem 1.5rem;
+    position: absolute;
+    top: -1.6rem;
+    @include respond(tab-land) {
+      font-size: 0.7rem;
+    }
+    @include respond(tab-port) {
+      display: none;
+      border-radius: 12px;
+    }
+  }
+  &-con {
+    // background-color: aqua;
+    height: 80vh;
+    width: 58%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    position: relative;
+    @include respond(tab-land) {
+      // font-size: 0.7rem;
+      width: 70%;
+    }
+    @include respond(tab-port) {
+      // display: none;
+      width: 100%;
+      height: 60vh;
+      position: absolute;
+      bottom: 0%;
+      // border-radius: 12px;
+    }
+    @include respond(phone) {
+      height: 70vh;
+    }
+  }
+  &_box {
+    background-color: white;
+    display: flex;
+    width: 100%;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    @include respond(phone) {
+      padding: 0;
+    }
+    &-left {
+      padding: 1rem;
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      @include respond(tab-port) {
+        // display: none;
+        width: 100%;
+      }
+      //   justify-content: center;
+      //   align-items: center;
+    }
+    &-right {
+      padding: 1rem;
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      @include respond(tab-port) {
+        display: none;
+      }
+      //   justify-content: center;
+    }
+  }
+}
+.name-input {
+  width: 100%;
+  background-color: green;
+  display: flex;
+}
+.input {
+  &-1 {
+    width: 50%;
+    background: #f7f8fa;
+    border: 1px solid #d9d9db;
+    height: 2.875rem;
+    padding: 0.4rem;
+  }
+  &-2 {
+    background: #f7f8fa;
+    border: 1px solid #d9d9db;
+    height: 2.875rem;
+    padding: 0.4rem;
+  }
+}
+.img {
+  height: 100%;
+  width: 100%;
+  &-box {
+    width: 100%;
+  }
+}
+.right-text {
+  &-1 {
+    display: flex;
+    justify-content: flex-end;
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-align: right;
+
+    color: #3d3d3d;
+    @include respond(tab-land) {
+      font-size: 0.8rem;
+    }
+
+    &_span {
+      color: rgba(47, 108, 229, 1);
+      cursor: pointer;
+    }
+  }
+  &-2 {
+    display: flex;
+
+    justify-content: center;
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    /* identical to box height, or 145% */
+
+    text-align: right;
+    letter-spacing: -0.008em;
+
+    color: #000000;
+    // background-color: #008a45;
+    opacity: 0.6;
+    &_child {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+    }
+    @include respond(tab-land) {
+      font-size: 0.7rem;
+    }
+    @include respond(phone) {
+      // font-size: 0.5rem;
+    }
+  }
+}
+.close-logo {
+  position: relative;
+  left: 60%;
+  top: -45%;
+  cursor: pointer;
+  @include respond(tab-land) {
+    // font-size: 0.7rem;
+    left: 72%;
+  }
+  @include respond(tab-port) {
+    // display: none;
+    z-index: 200;
+    left: 47%;
+    top: -7%;
+    // background-color: #f7f8fa;
+  }
+  @include respond(phone) {
+    top: -16%;
+    left: 45%;
+  }
+}

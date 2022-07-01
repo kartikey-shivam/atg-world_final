@@ -1,0 +1,71 @@
+.btn {
+  &-text {
+    margin: 1px 0rem 0rem 5px;
+  }
+  &-signup {
+    width: 100%;
+    height: 2.5rem;
+    background: #2f6ce5;
+    border: none;
+    border-radius: 20px;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    color: white;
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    @include respond(tab-port) {
+      // display: none;
+      width: 50%;
+      margin: 1rem 0.5rem;
+    }
+  }
+  &-other {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.375rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    background: #ffffff;
+    border: 0.6px solid #d9d9db;
+    border-radius: 2px;
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+
+    color: #000000;
+  }
+}
+.btn-follow {
+  background: #edeef0;
+  border-radius: 14px;
+  padding: 0.2rem 0.5rem;
+  border: none;
+}
+.btn_con {
+  display: flex;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  &-text {
+    position: absolute;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    right: 0;
+    display: none;
+    @include respond(phone) {
+      display: flex;
+      font-size: 1.2rem;
+    }
+    @include respond(tab-port) {
+      display: flex;
+    }
+
+    // justify-self: flex-end;
+  }
+}
